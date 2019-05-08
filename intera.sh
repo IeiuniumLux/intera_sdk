@@ -135,7 +135,7 @@ in \${ros_setup}.\n"
 
 	# verify the user is running this script in the root of the catkin
 	# workspace and that the workspace has been compiled.
-	if [ ! -s "install/setup.bash" ]; then
+	if [ ! -s "install/setup.sh" ]; then
 		echo -ne "EXITING - \n1) Please verify that this script is being run \
 in the root of your catkin workspace.\n2) Please verify that your workspace \
 has been built (source /opt/ros/\${ros_version}/setup.sh; catkin_make).\n\
@@ -149,7 +149,7 @@ has been built (source /opt/ros/\${ros_version}/setup.sh; catkin_make).\n\
 		export ROS_MASTER_URI="http://${robot_hostname}:11311"
 
 	# source the catkin setup bash script
-	source install/setup.bash
+	source install/setup.sh
 
 	# setup the bash prompt
 	export __ROS_PROMPT=\${__ROS_PROMPT:-0}
